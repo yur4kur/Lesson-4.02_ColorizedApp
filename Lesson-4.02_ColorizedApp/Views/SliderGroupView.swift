@@ -16,17 +16,10 @@ struct SliderGroupView: View {
             Text("\(lround(value))").foregroundStyle(.white)
             Slider(value: $value, in: 0...255, step: 1)
                 .tint(color)
-            TextField("", text: .constant("\(lround(value))"))
+            TextField("", value: $value, formatter: NumberFormatter())
                 .textFieldStyle(.roundedBorder)
                 .frame(width: 45)
                 .keyboardType(.numberPad)
-                .keyboardShortcut(KeyEquivalent("a"), modifiers: /*@START_MENU_TOKEN@*/.command/*@END_MENU_TOKEN@*/)
-                //.toolbar(.automatic, for: .automatic)
-//                .toolbar {
-//                    <#code#>
-//                }
-                
-            
 
         }
         .padding(.horizontal)
