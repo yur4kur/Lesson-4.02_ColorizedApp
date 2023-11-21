@@ -20,6 +20,13 @@ struct SliderGroupView: View {
                 .textFieldStyle(.roundedBorder)
                 .frame(width: 45)
                 .keyboardType(.numberPad)
+                .keyboardShortcut(KeyEquivalent("a"), modifiers: /*@START_MENU_TOKEN@*/.command/*@END_MENU_TOKEN@*/)
+                //.toolbar(.automatic, for: .automatic)
+//                .toolbar {
+//                    <#code#>
+//                }
+                
+            
 
         }
         .padding(.horizontal)
