@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SliderGroupView: View {
     @Binding var value: Double
+    @FocusState private var valueIsFocused: Bool
     var color: Color
     
     var body: some View {
@@ -17,10 +18,17 @@ struct SliderGroupView: View {
             Slider(value: $value, in: 0...255, step: 1)
                 .tint(color)
             TextField("", value: $value, formatter: NumberFormatter())
+                .focused($valueIsFocused)
                 .textFieldStyle(.roundedBorder)
                 .frame(width: 45)
                 .keyboardType(.numberPad)
-
+                .toolbar {
+                    ToolbarItemGroup(placement: .keyboard) {
+                        Button("Done") {
+                            valueIsFocused.toggle()
+                        }
+                    }
+                }
         }
         .padding(.horizontal)
     }
