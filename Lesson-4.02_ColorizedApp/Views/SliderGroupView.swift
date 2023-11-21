@@ -13,11 +13,14 @@ struct SliderGroupView: View {
     
     var body: some View {
         HStack {
-            Text("1").foregroundStyle(.white)
-            Slider(value: $value, in: 1...255, step: 1)
+            Text("\(lround(value))").foregroundStyle(.white)
+            Slider(value: $value, in: 0...255, step: 1)
                 .tint(color)
-            Text("255").foregroundStyle(.white)
-            
+            TextField("", text: .constant("\(lround(value))"))
+                .textFieldStyle(.roundedBorder)
+                .frame(width: 45)
+                .keyboardType(.numberPad)
+
         }
         .padding(.horizontal)
     }
