@@ -8,11 +8,18 @@
 import SwiftUI
 
 struct ColorScreenView: View {
+    var color: Color
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        RoundedRectangle(cornerRadius: 10.0)
+            .frame(height: 150)
+            .overlay(RoundedRectangle(cornerRadius: 10)
+                .stroke(Color.white, lineWidth: 4))
+            .foregroundStyle(color)
+            .padding(.all)
     }
 }
 
 #Preview {
-    ColorScreenView()
+    ColorScreenView(color: Color(red: 1.255, green: 0.0, blue: 0.0))
 }
