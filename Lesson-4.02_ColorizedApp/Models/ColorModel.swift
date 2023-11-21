@@ -5,6 +5,7 @@
 //  Created by Юрий Куринной on 20.11.2023.
 //
 
+<<<<<< FinalTask
 import SwiftUI
 
 struct ColorModel {
@@ -21,3 +22,4 @@ struct ColorModel {
         self.blueColor = blueColor / 100
     }
 }
+>>>>>> main
