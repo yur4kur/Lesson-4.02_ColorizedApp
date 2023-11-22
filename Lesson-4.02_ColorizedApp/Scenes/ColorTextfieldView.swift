@@ -16,20 +16,6 @@ struct ColorTextfieldView: View {
         TextField("", value: $value, formatter: NumberFormatter())
             .textFieldStyle(.roundedBorder)
             .frame(width: 45)
-            .onSubmit {
-                checkValue()
-            }
-            .alert("Wrong format!", isPresented: $alert, actions: {}) {
-                Text("Number should be in 0...255 range")
-            }
-            
-    }
-    
-    private func checkValue() {
-        if value > 255 || value < 0 {
-            alert.toggle()
-            value = 0.0
-        }
     }
 }
 

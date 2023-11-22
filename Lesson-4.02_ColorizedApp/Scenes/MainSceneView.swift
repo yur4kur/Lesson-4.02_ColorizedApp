@@ -11,21 +11,16 @@ import SwiftUI
 
 // MARK: - HomeView
 
-struct ControllerView: View {
-    
-    // MARK: Types
-    enum ColorTextfield {
-        case red, green, blue
-    }
+struct MainSceneView: View {
     
     // MARK: Wrapped properties
     @State private var redSliderValue = Double.random(in: 0...255)
     @State private var greenSliderValue = Double.random(in: 0...255)
     @State private var blueSliderValue = Double.random(in: 0...255)
-    @FocusState private var isFocused: ColorTextfield?
+    @FocusState private var focusedColorViewModel: ColorModel.focusedColor?
     
     // MARK: Private properties
-    private var color: ColorModel {
+    private var colorViewModel: ColorModel {
         ColorModel(
             redColor: redSliderValue,
             greenColor: greenSliderValue,
@@ -48,15 +43,15 @@ struct ControllerView: View {
             VStack {
                 
                 /// Color screen
-                ColorScreenView(color: color.finalColor)
+                ColorScreenView(color: colorViewModel.finalColor)
                 
                 /// Sliders' group
-                SliderGroupView(value: $redSliderValue, color: .red)
-                    .focused($isFocused, equals: .red)
-                SliderGroupView(value: $greenSliderValue, color: .green)
-                    .focused($isFocused, equals: .green)
-                SliderGroupView(value: $blueSliderValue, color: .blue)
-                    .focused($isFocused, equals: .blue)
+                SliderGroupSceneView(value: $redSliderValue, color: .red)
+                    .focused($focusedColorViewModel, equals: .red)
+                SliderGroupSceneView(value: $greenSliderValue, color: .green)
+                    .focused($focusedColorViewModel, equals: .green)
+                SliderGroupSceneView(value: $blueSliderValue, color: .blue)
+                    .focused($focusedColorViewModel, equals: .blue)
                 
                 Spacer()
             }
@@ -87,35 +82,35 @@ struct ControllerView: View {
     // MARK: Moving between TextFileds
     /// Up
     private func moveUp() {
-        switch isFocused {
+        switch focusedColorViewModel {
         case .red:
-            isFocused = .blue
+            focusedColorViewModel = .blue
         case .green:
-            isFocused = .red
+            focusedColorViewModel = .red
         default:
-            isFocused = .green
+            focusedColorViewModel = .green
         }
     }
     
     /// Down
     private func moveDown() {
-        switch isFocused {
+        switch focusedColorViewModel {
         case .red:
-            isFocused = .green
+            focusedColorViewModel = .green
         case .green:
-            isFocused = .blue
+            focusedColorViewModel = .blue
         default:
-            isFocused = .red
+            focusedColorViewModel = .red
         }
     }
     
     // MARK: Hiding keyboard
     private func hideKeyboard() {
-        isFocused = nil
+        focusedColorViewModel = nil
     }
     
 }
 // MARK: - Preview
 #Preview {
-    ControllerView()
+    MainSceneView()
 }
