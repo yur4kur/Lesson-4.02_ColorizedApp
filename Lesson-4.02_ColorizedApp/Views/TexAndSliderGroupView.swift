@@ -7,9 +7,8 @@
 
 import SwiftUI
 
-struct SliderGroupView: View {
+struct TexAndSliderGroupView: View {
     @Binding var value: Double
-    
     var color: Color
     
     var body: some View {
@@ -24,5 +23,5 @@ struct SliderGroupView: View {
 }
 
 #Preview {
-    SliderGroupView(value: .constant(150), color: .red)
+    TexAndSliderGroupView(value: .constant(150), color: .red)
 }
