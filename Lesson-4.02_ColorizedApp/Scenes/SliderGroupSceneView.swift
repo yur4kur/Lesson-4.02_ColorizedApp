@@ -12,14 +12,12 @@ import SwiftUI
 struct SliderGroupSceneView: View {
     
     // MARK: Wrapped properties
-    
     @Binding var value: Double
     
     @State private var textValue = 0.0
     @State private var alert = false
     
     // MARK: Public properties
-    
     var color: Color
     
     // MARK: - View body
@@ -45,6 +43,9 @@ struct SliderGroupSceneView: View {
         }
         .padding(.horizontal)
     }
+    
+    
+    // MARK: - Private methods
     
     private func checkValue() {
         if textValue > 255 || textValue < 0 {

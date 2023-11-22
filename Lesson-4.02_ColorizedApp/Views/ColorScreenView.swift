@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ColorScreenView: View {
+    
     var color: Color
     
     var body: some View {

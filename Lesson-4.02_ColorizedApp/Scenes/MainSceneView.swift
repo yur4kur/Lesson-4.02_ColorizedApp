@@ -30,6 +30,7 @@ struct MainSceneView: View {
     
     
     // MARK: - View body
+    
     var body: some View {
         ZStack {
             
@@ -75,9 +76,13 @@ struct MainSceneView: View {
             }
         }
     }
-    
    
     // MARK: - Private methods
+    
+    // MARK: Hiding keyboard
+    private func hideKeyboard() {
+        focusedColorViewModel = nil
+    }
     
     // MARK: Moving between TextFileds
     /// Up
@@ -103,14 +108,9 @@ struct MainSceneView: View {
             focusedColorViewModel = .red
         }
     }
-    
-    // MARK: Hiding keyboard
-    private func hideKeyboard() {
-        focusedColorViewModel = nil
-    }
-    
 }
 // MARK: - Preview
+
 #Preview {
     MainSceneView()
 }

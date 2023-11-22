@@ -16,6 +16,7 @@ struct ColourTextFieldView: View {
         TextField("", value: $value, formatter: NumberFormatter())
             .textFieldStyle(.roundedBorder)
             .frame(width: 45)
+            .keyboardType(.numberPad)
     }
 }
 
