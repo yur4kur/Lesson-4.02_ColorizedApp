@@ -8,18 +8,19 @@
 import SwiftUI
 
 struct ColorTextfieldView: View {
+    
     @Binding var value: Double
     @State private var alert = false
-    
-    
+ 
     var body: some View {
         TextField("", value: $value, formatter: NumberFormatter())
             .textFieldStyle(.roundedBorder)
             .frame(width: 45)
-            .keyboardType(.numberPad)
-            .onSubmit() {
+            .onSubmit {
                 checkValue()
-                    //.alert("Wrong format!", isPresented: $alert) {}
+            }
+            .alert("Wrong format!", isPresented: $alert, actions: {}) {
+                Text("Number should be in 0...255 range")
             }
             
     }
@@ -27,6 +28,7 @@ struct ColorTextfieldView: View {
     private func checkValue() {
         if value > 255 || value < 0 {
             alert.toggle()
+            value = 0.0
         }
     }
 }

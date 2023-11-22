@@ -22,28 +22,29 @@ struct ControllerView: View {
     @State private var redSliderValue = Double.random(in: 0...255)
     @State private var greenSliderValue = Double.random(in: 0...255)
     @State private var blueSliderValue = Double.random(in: 0...255)
-    
     @FocusState private var isFocused: ColorTextfield?
     
     // MARK: Private properties
     private var color: ColorModel {
-        ColorModel(redColor: redSliderValue,
-                   greenColor: greenSliderValue,
-                   blueColor: blueSliderValue)
+        ColorModel(
+            redColor: redSliderValue,
+            greenColor: greenSliderValue,
+            blueColor: blueSliderValue
+        )
     }
     
     
-    // MARK: View body
+    // MARK: - View body
     var body: some View {
         ZStack {
             
-            /// Background
+            // MARK:  Background
             GradientView()
                 .onTapGesture {
                     hideKeyboard()
                 }
             
-            /// Elements Stack
+            // MARK: Elements Stack
             VStack {
                 
                 /// Color screen
@@ -60,14 +61,14 @@ struct ControllerView: View {
                 Spacer()
             }
             
-            
+            // MARK: Toolbar settings
             .toolbar {
                 ToolbarItemGroup(placement: .keyboard) {
-                    Button("Up") {
-                        moveUp()
+                    Button(action: moveUp) {
+                        Image(systemName: "chevron.up")
                     }
-                    Button("Down") {
-                        moveDown()
+                    Button(action: moveDown) {
+                        Image(systemName: "chevron.down")
                     }
         
                     Spacer()
@@ -80,23 +81,11 @@ struct ControllerView: View {
         }
     }
     
-    // MARK: Private methods
+   
+    // MARK: - Private methods
     
-    /// Checking TextField value
-    private func checkValue() {
-        switch isFocused {
-        case .red:
-            if redSliderValue > 255 {
-                print("Checked")
-            }
-        case .green:
-            isFocused = .red
-        default:
-            isFocused = .green
-        }
-    }
-    
-    /// Moving between TextFileds
+    // MARK: Moving between TextFileds
+    /// Up
     private func moveUp() {
         switch isFocused {
         case .red:
@@ -108,6 +97,7 @@ struct ControllerView: View {
         }
     }
     
+    /// Down
     private func moveDown() {
         switch isFocused {
         case .red:
@@ -119,13 +109,13 @@ struct ControllerView: View {
         }
     }
     
-    /// Hiding keyboard
+    // MARK: Hiding keyboard
     private func hideKeyboard() {
         isFocused = nil
     }
     
 }
-
+// MARK: - Preview
 #Preview {
     ControllerView()
 }
