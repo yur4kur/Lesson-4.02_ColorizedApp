@@ -15,6 +15,7 @@
 		6A0E0F0F2B0B8A7A007EAC6E /* ColorScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0E0F0E2B0B8A7A007EAC6E /* ColorScreenView.swift */; };
 		6A0E0F112B0B8AEA007EAC6E /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0E0F102B0B8AEA007EAC6E /* GradientView.swift */; };
 		6A0E0F142B0B9119007EAC6E /* ColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0E0F132B0B9119007EAC6E /* ColorModel.swift */; };
+		6A6ABEF62B0CAC700042838F /* ColorTextfieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6ABEF52B0CAC700042838F /* ColorTextfieldView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		6A0E0F0E2B0B8A7A007EAC6E /* ColorScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorScreenView.swift; sourceTree = "<group>"; };
 		6A0E0F102B0B8AEA007EAC6E /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		6A0E0F132B0B9119007EAC6E /* ColorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorModel.swift; sourceTree = "<group>"; };
+		6A6ABEF52B0CAC700042838F /* ColorTextfieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTextfieldView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,9 +90,9 @@
 		6A0E0F0A2B0B75D4007EAC6E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				6A0E0F0E2B0B8A7A007EAC6E /* ColorScreenView.swift */,
-				6A0E0F0B2B0B75F4007EAC6E /* SliderGroupView.swift */,
 				6A0E0F102B0B8AEA007EAC6E /* GradientView.swift */,
+				6A0E0F0E2B0B8A7A007EAC6E /* ColorScreenView.swift */,
+				6A6ABEF42B0CAC400042838F /* SliderGroupScene */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -109,6 +111,15 @@
 				6A0E0F132B0B9119007EAC6E /* ColorModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		6A6ABEF42B0CAC400042838F /* SliderGroupScene */ = {
+			isa = PBXGroup;
+			children = (
+				6A0E0F0B2B0B75F4007EAC6E /* SliderGroupView.swift */,
+				6A6ABEF52B0CAC700042838F /* ColorTextfieldView.swift */,
+			);
+			path = SliderGroupScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +197,7 @@
 				6A0E0F112B0B8AEA007EAC6E /* GradientView.swift in Sources */,
 				6A0E0F0F2B0B8A7A007EAC6E /* ColorScreenView.swift in Sources */,
 				6A0E0F0C2B0B75F4007EAC6E /* SliderGroupView.swift in Sources */,
+				6A6ABEF62B0CAC700042838F /* ColorTextfieldView.swift in Sources */,
 				6A0E0F142B0B9119007EAC6E /* ColorModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
