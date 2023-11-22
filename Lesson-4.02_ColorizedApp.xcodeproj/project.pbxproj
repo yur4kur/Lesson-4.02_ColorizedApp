@@ -8,27 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		6A0E0EFC2B0B6F14007EAC6E /* Lesson_4_02_ColorizedAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0E0EFB2B0B6F14007EAC6E /* Lesson_4_02_ColorizedAppApp.swift */; };
-		6A0E0EFE2B0B6F14007EAC6E /* ControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0E0EFD2B0B6F14007EAC6E /* ControllerView.swift */; };
+		6A0E0EFE2B0B6F14007EAC6E /* MainSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0E0EFD2B0B6F14007EAC6E /* MainSceneView.swift */; };
 		6A0E0F002B0B6F15007EAC6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A0E0EFF2B0B6F15007EAC6E /* Assets.xcassets */; };
 		6A0E0F032B0B6F15007EAC6E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A0E0F022B0B6F15007EAC6E /* Preview Assets.xcassets */; };
-		6A0E0F0C2B0B75F4007EAC6E /* SliderGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0E0F0B2B0B75F4007EAC6E /* SliderGroupView.swift */; };
+		6A0E0F0C2B0B75F4007EAC6E /* SliderGroupSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0E0F0B2B0B75F4007EAC6E /* SliderGroupSceneView.swift */; };
 		6A0E0F0F2B0B8A7A007EAC6E /* ColorScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0E0F0E2B0B8A7A007EAC6E /* ColorScreenView.swift */; };
 		6A0E0F112B0B8AEA007EAC6E /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0E0F102B0B8AEA007EAC6E /* GradientView.swift */; };
 		6A0E0F142B0B9119007EAC6E /* ColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0E0F132B0B9119007EAC6E /* ColorModel.swift */; };
-		6A6ABEF62B0CAC700042838F /* ColorTextfieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6ABEF52B0CAC700042838F /* ColorTextfieldView.swift */; };
+		6AD217462B0E56C200B23D39 /* ColourTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD217452B0E56C200B23D39 /* ColourTextFieldView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6A0E0EF82B0B6F14007EAC6E /* Lesson-4.02_ColorizedApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lesson-4.02_ColorizedApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A0E0EFB2B0B6F14007EAC6E /* Lesson_4_02_ColorizedAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson_4_02_ColorizedAppApp.swift; sourceTree = "<group>"; };
-		6A0E0EFD2B0B6F14007EAC6E /* ControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerView.swift; sourceTree = "<group>"; };
+		6A0E0EFD2B0B6F14007EAC6E /* MainSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSceneView.swift; sourceTree = "<group>"; };
 		6A0E0EFF2B0B6F15007EAC6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A0E0F022B0B6F15007EAC6E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		6A0E0F0B2B0B75F4007EAC6E /* SliderGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderGroupView.swift; sourceTree = "<group>"; };
+		6A0E0F0B2B0B75F4007EAC6E /* SliderGroupSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderGroupSceneView.swift; sourceTree = "<group>"; };
 		6A0E0F0E2B0B8A7A007EAC6E /* ColorScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorScreenView.swift; sourceTree = "<group>"; };
 		6A0E0F102B0B8AEA007EAC6E /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		6A0E0F132B0B9119007EAC6E /* ColorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorModel.swift; sourceTree = "<group>"; };
-		6A6ABEF52B0CAC700042838F /* ColorTextfieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTextfieldView.swift; sourceTree = "<group>"; };
+		6AD217452B0E56C200B23D39 /* ColourTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourTextFieldView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +64,7 @@
 				6A0E0EFB2B0B6F14007EAC6E /* Lesson_4_02_ColorizedAppApp.swift */,
 				6A0E0F122B0B9101007EAC6E /* Models */,
 				6A0E0F0A2B0B75D4007EAC6E /* Views */,
-				6A0E0F0D2B0B8A45007EAC6E /* Controllers */,
+				6A6ABEF42B0CAC400042838F /* Scenes */,
 				6A0E0F092B0B6F5F007EAC6E /* Resources */,
 				6A0E0F012B0B6F15007EAC6E /* Preview Content */,
 			);
@@ -92,17 +92,9 @@
 			children = (
 				6A0E0F102B0B8AEA007EAC6E /* GradientView.swift */,
 				6A0E0F0E2B0B8A7A007EAC6E /* ColorScreenView.swift */,
-				6A6ABEF42B0CAC400042838F /* SliderGroupScene */,
+				6AD217452B0E56C200B23D39 /* ColourTextFieldView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		6A0E0F0D2B0B8A45007EAC6E /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				6A0E0EFD2B0B6F14007EAC6E /* ControllerView.swift */,
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 		6A0E0F122B0B9101007EAC6E /* Models */ = {
@@ -113,13 +105,13 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		6A6ABEF42B0CAC400042838F /* SliderGroupScene */ = {
+		6A6ABEF42B0CAC400042838F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				6A0E0F0B2B0B75F4007EAC6E /* SliderGroupView.swift */,
-				6A6ABEF52B0CAC700042838F /* ColorTextfieldView.swift */,
+				6A0E0F0B2B0B75F4007EAC6E /* SliderGroupSceneView.swift */,
+				6A0E0EFD2B0B6F14007EAC6E /* MainSceneView.swift */,
 			);
-			path = SliderGroupScene;
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,12 +184,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A0E0EFE2B0B6F14007EAC6E /* ControllerView.swift in Sources */,
+				6A0E0EFE2B0B6F14007EAC6E /* MainSceneView.swift in Sources */,
 				6A0E0EFC2B0B6F14007EAC6E /* Lesson_4_02_ColorizedAppApp.swift in Sources */,
 				6A0E0F112B0B8AEA007EAC6E /* GradientView.swift in Sources */,
 				6A0E0F0F2B0B8A7A007EAC6E /* ColorScreenView.swift in Sources */,
-				6A0E0F0C2B0B75F4007EAC6E /* SliderGroupView.swift in Sources */,
-				6A6ABEF62B0CAC700042838F /* ColorTextfieldView.swift in Sources */,
+				6AD217462B0E56C200B23D39 /* ColourTextFieldView.swift in Sources */,
+				6A0E0F0C2B0B75F4007EAC6E /* SliderGroupSceneView.swift in Sources */,
 				6A0E0F142B0B9119007EAC6E /* ColorModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
