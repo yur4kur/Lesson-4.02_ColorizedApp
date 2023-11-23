@@ -8,11 +8,7 @@
 import SwiftUI
 
 struct ColorModel {
-    
-    enum focusedColor {
-       case red, green, blue
-    }
-    
+
     let redColor: Double
     let greenColor: Double
     let blueColor: Double

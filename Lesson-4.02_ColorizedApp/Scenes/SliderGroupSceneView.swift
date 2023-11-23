@@ -11,14 +11,21 @@ import SwiftUI
 
 struct SliderGroupSceneView: View {
     
-    // MARK: Wrapped properties
+    // MARK: - Wrapped properties
+    
+    /// Slider's value
     @Binding var value: Double
     
+    /// Textfield's text & alert
     @State private var textValue = 0.0
     @State private var alert = false
     
-    // MARK: Public properties
+    /// Focus state
+    @FocusState private var isFocused: Bool
+    
+    // MARK: - Public properties
     var color: Color
+   
     
     // MARK: - View body
     
@@ -34,11 +41,14 @@ struct SliderGroupSceneView: View {
                 .onAppear {
                     textValue = value
                 }
-                .onSubmit {
-                    checkValue()
+                .focused($isFocused)
+                .onChange(of: isFocused) {
+                    withAnimation {
+                        checkValue()
+                    }
                 }
-                .alert("Wrong format!", isPresented: $alert, actions: {}) {
-                    Text("Number should be in 0...255 range")
+                .alert(Constants.alertTitle, isPresented: $alert, actions: {}) {
+                    Text(Constants.alertMessage)
                 }
         }
         .padding(.horizontal)
@@ -48,12 +58,21 @@ struct SliderGroupSceneView: View {
     // MARK: - Private methods
     
     private func checkValue() {
-        if textValue > 255 || textValue < 0 {
+        if textValue > 255 { /// с numberPad можно ввести только целые числа, поэтому максимально урезал проверку
             alert.toggle()
-            value = 0.0
+            value = 0
         } else {
             value = textValue
         }
+    }
+}
+
+// MARK: - Constants
+
+extension SliderGroupSceneView {
+    enum Constants {
+        static let alertTitle = "Wrong format!"
+        static let alertMessage = "Number should be in 0...255 range"
     }
 }
 

@@ -9,17 +9,23 @@ import SwiftUI
 
 
 
-// MARK: - HomeView
+// MARK: - MainSceneView
 
 struct MainSceneView: View {
     
-    // MARK: Wrapped properties
+    // MARK: - Wrapped properties
+    
+    /// Sliders' initial values
     @State private var redSliderValue = Double.random(in: 0...255)
     @State private var greenSliderValue = Double.random(in: 0...255)
     @State private var blueSliderValue = Double.random(in: 0...255)
-    @FocusState private var focusedColorViewModel: ColorModel.focusedColor?
     
-    // MARK: Private properties
+    /// Placement of focus
+    @FocusState private var focusedColorViewModel: FocusedColor?
+    
+    // MARK: - Private properties
+    
+    /// Color to reflect
     private var colorViewModel: ColorModel {
         ColorModel(
             redColor: redSliderValue,
@@ -40,7 +46,7 @@ struct MainSceneView: View {
                     hideKeyboard()
                 }
             
-            // MARK: Elements Stack
+            // MARK: Elements
             VStack {
                 
                 /// Color screen
