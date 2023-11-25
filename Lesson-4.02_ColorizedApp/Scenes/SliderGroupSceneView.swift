@@ -24,7 +24,7 @@ struct SliderGroupSceneView: View {
     @FocusState private var isFocused: Bool
     
     // MARK: - Public properties
-    var color: Color
+    let color: Color
    
     
     // MARK: - View body
