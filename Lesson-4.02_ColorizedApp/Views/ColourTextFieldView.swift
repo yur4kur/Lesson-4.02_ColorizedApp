@@ -13,7 +13,7 @@ struct ColourTextFieldView: View {
     @State private var alert = false
     
     var body: some View {
-        TextField("", value: $value, formatter: NumberFormatter())
+        TextField(Constants.nilString, value: $value, formatter: NumberFormatter())
             .textFieldStyle(.roundedBorder)
             .frame(width: 45)
             .keyboardType(.numberPad)

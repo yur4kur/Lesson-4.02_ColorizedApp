@@ -58,21 +58,12 @@ struct SliderGroupSceneView: View {
     // MARK: - Private methods
     
     private func checkValue() {
-        if textValue > 255 { /// с numberPad можно ввести только целые числа, поэтому максимально урезал проверку
+        if textValue > 255 { 
             alert.toggle()
             value = 0
         } else {
             value = textValue
         }
-    }
-}
-
-// MARK: - Constants
-
-extension SliderGroupSceneView {
-    enum Constants {
-        static let alertTitle = "Wrong format!"
-        static let alertMessage = "Number should be in 0...255 range"
     }
 }
 

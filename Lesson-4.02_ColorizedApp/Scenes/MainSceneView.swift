@@ -67,15 +67,15 @@ struct MainSceneView: View {
             .toolbar {
                 ToolbarItemGroup(placement: .keyboard) {
                     Button(action: moveUp) {
-                        Image(systemName: "chevron.up")
+                        Image(systemName: Constants.upArrow)
                     }
                     Button(action: moveDown) {
-                        Image(systemName: "chevron.down")
+                        Image(systemName: Constants.downArrow)
                     }
         
                     Spacer()
                     
-                    Button("Done") {
+                    Button(Constants.doneButton) {
                         hideKeyboard()
                     }
                 }
@@ -115,6 +115,7 @@ struct MainSceneView: View {
         }
     }
 }
+
 // MARK: - Preview
 
 #Preview {
